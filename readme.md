@@ -1,13 +1,13 @@
-# This is example Back End API for Open Music V2
+## This is example Back End API for Open Music V2
 
-## Features
-### JWT Authentications
-### Joi Validation
-### Data Validation
-### Users Collaborations
-### Authorizations
+#### Features
+- ##### JWT Authentications
+- ##### Joi Validation
+- ##### Data Validation
+- ##### Users Collaborations
+- ##### Authorizations
 
-# Configure Projects
+## Configure Projects
 
 - Clone project
 
