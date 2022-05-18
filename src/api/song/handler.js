@@ -5,7 +5,7 @@ class SongHandler {
         this._service = service;
         this._validator = validator;
         this.postSongHandler = this.postSongHandler.bind(this);
-        this.getSongsHandler = this.getSongHandler.bind(this);
+        this.getSongHandler = this.getSongHandler.bind(this);
         this.getSongByIdHandler = this.getSongByIdHandler.bind(this);
         this.putSongByIdHandler = this.putSongByIdHandler.bind(this);
         this.deleteSongByIdHandler = this.deleteSongByIdHandler.bind(this);
@@ -47,14 +47,21 @@ class SongHandler {
         }
     }
     
-    async getSongHandler() {
-        const songs = await this._service.getSongs();
-        return {
+    async getSongHandler(request, h) {
+        const { title, performer } = request.query;
+        const songs = await this._service.getSong(title, performer);
+        const response = h.response({
           status: 'success',
           data: {
-            songs,
+            songs: songs.map((songs) => ({
+              id: songs.id,
+              title: songs.title,
+              performer: songs.performer,
+            })),
           },
-        };
+        });
+        response.code(200);
+        return response;
     }
     
     async getSongByIdHandler(request, h) {

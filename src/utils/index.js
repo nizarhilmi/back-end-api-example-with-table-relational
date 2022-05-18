@@ -6,8 +6,13 @@ const mapDBToModel = ({
     genre,
     duration,
     name,
-    albumId,
-    songId,
+    album_id,
+    song_id,
+    playlist_id,
+    user_id,
+    username,
+    password,
+    fullname,
   }) => ({
     id,
     title,
@@ -16,8 +21,13 @@ const mapDBToModel = ({
     genre,
     duration,
     name,
-    albumId,
-    songId,
+    albumId: album_id,
+    songId: song_id,
+    playlistId: playlist_id,
+    userId: user_id,
+    username,
+    password,
+    fullname,
   });
   
 module.exports = { mapDBToModel };

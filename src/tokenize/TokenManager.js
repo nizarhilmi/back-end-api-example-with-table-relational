@@ -1,4 +1,6 @@
 const InvariantError = require('../exception/InvariantError');
+const Jwt = require('@hapi/jwt');
+
 
 const TokenManager = {
 
