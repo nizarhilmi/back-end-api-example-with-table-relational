@@ -12,7 +12,7 @@
 - Clone project
 
     ```
-    git clone
+    git clone https://github.com/nizarhilmi/back-end-api-example-with-table-relational.git
     ```
 - Install library
 
